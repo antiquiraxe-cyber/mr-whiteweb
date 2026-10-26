@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: 'Trebuchet MS', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+    .card {
+        @apply rounded-3xl border-4 border-black bg-slate-800 p-5 shadow-[5px_5px_0_#000];
+    }
+    .btn {
+        @apply inline-flex min-h-12 w-full items-center justify-center rounded-2xl border-4 border-black px-5 py-3 text-center font-black tracking-wide text-white shadow-[4px_4px_0_#000] transition active:translate-x-1 active:translate-y-1 active:shadow-none disabled:cursor-not-allowed disabled:opacity-40;
+    }
+    .input {
+        @apply min-h-12 w-full rounded-xl border-4 border-black bg-white px-4 py-3 font-bold text-slate-900 outline-none placeholder:text-slate-400 focus:ring-4 focus:ring-cyan-300;
+    }
+    .eyebrow {
+        @apply text-xs font-black tracking-[0.25em] text-cyan-300 uppercase;
+    }
+}
+
+body {
+    background-color: #0f172a;
+    background-image: radial-gradient(#fff 1px, transparent 1px), radial-gradient(#67e8f9 1px, transparent 1px);
+    background-position: 0 0, 25px 35px;
+    background-size: 80px 80px, 110px 110px;
+}
+
+[hidden], [x-cloak] { display: none !important; }
